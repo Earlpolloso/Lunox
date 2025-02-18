@@ -11,7 +11,7 @@ const manager = new ClusterManager(`${__dirname}/clients/manager.js`, {
 
 manager.on("clusterCreate", (cluster) => console.log(`[INFO] Launched cluster ${cluster.id}`));
 manager.spawn({ timeout: -1 });
-
+require('./dashboard/server');
 /**
  * Project: Lunox
  * Author: adh319
